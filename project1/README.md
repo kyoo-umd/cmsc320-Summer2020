@@ -10,7 +10,7 @@ Of course, you don't have access to the raw data for either of these two tables,
 
 ## Part 1: Data scraping and preparation
 
-### Step 1: Scrape your competitor's data (10 pts)
+### Step 1: Scrape your competitor's data (1 pts)
 
 Use Python to scrape data for the top 50 solar flares shown in [SpaceWeatherLive.com](https://www.spaceweatherlive.com/en/solar-activity/top-50-solar-flares). Steps to do this are:
 
@@ -54,7 +54,7 @@ rank x_class date region start_time max_time end_time movie
  ... with 40 more rows
 ```
 
-### Step 2: Tidy the top 50 solar flare data (10 pts)
+### Step 2: Tidy the top 50 solar flare data (1 pts)
 
 Your next step is to make sure this table is usable using pandas:
 
@@ -93,7 +93,7 @@ rank x_class  start_datetime  max_datetime  end_datetime region
  ... with 40 more rows
 ```
 
-### Step 3: Scrape the NASA data (15 pts)
+### Step 3: Scrape the NASA data (2 pts)
 
 Next you need to scrape the data in [http://cdaw.gsfc.nasa.gov/CME_list/radio/waves_type2.html](http://cdaw.gsfc.nasa.gov/CME_list/radio/waves_type2.html) ([also available here](http://www.hcbravo.org/IntroDataSci/misc/waves_type2.html)) to get additional data about these solar flares. This table format is described here: [http://cdaw.gsfc.nasa.gov/CME_list/radio/waves_type2_description.htm](http://cdaw.gsfc.nasa.gov/CME_list/radio/waves_type2_description.htm), and here:
 
@@ -216,7 +216,7 @@ start_date start_time end_date end_time start_frequency end_frequency flare_loca
 
 
 
-### Step 4: Tidy the NASA the table (15 pts)
+### Step 4: Tidy the NASA the table (2 pts)
 
 Now, we tidy up the NASA table. Here we will code missing observations properly, recode columns that correspond to more than one piece of information, and treat dates and times appropriately.
 
@@ -255,19 +255,19 @@ start_datetime  end_datetime start_frequency end_frequency flare_location flare_
 
 Now that you have data from both sites, let’s start some analysis.
 
-### Question 1: Replication (10 pts)
+### Question 1: Replication (1 pts)
 
 Can you replicate the top 50 solar flare table in [SpaceWeatherLive.com](https://www.spaceweatherlive.com/en/solar-activity/top-50-solar-flares) exactly using the data obtained from NASA? That is, if you get the top 50 solar flares from the NASA table based on their classification (e.g., X28 is the highest), do you get data for the same solar flare events?
 
 Include code used to get the top 50 solar flares from the NASA table (be careful when ordering by classification). Write a sentence or two discussing how well you can replicate the SpaceWeatherLive data from the NASA data.
 
-### Question 2: Integration (15 pts)
+### Question 2: Integration (2 pts)
 
 Write a function that finds the best matching row in the NASA data for each of the top 50 solar flares in the SpaceWeatherLive data. Here, you have to decide for yourself how you determine what is the best matching entry in the NASA data for each of the top 50 solar flares.
 
 In your submission, include an explanation of how you are defining best matching rows across the two datasets in addition to the code used to find the best matches. Finally, use your function to add a new column to the NASA dataset indicating its rank according to SpaceWeatherLive, if it appears in that dataset.
 
-### Question 3: Analysis (10 pts)
+### Question 3: Analysis (1 pts)
 
 Prepare one plot that shows the top 50 solar flares in context with all data available in the NASA dataset. Here are some possibilities (you can do something else)
 
