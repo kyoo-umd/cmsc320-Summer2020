@@ -89,7 +89,7 @@ Write code to produce plots that specifically show at least one of the statement
 
 ### Correlation between payroll and winning percentage
 
-#### Problem 4 (1 pt)
+#### Problem 4 (1.5 pt)
 
 Write code to discretize year into five time periods (you can use [pandas.cut](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.cut.html) to accomplish this) and then make a scatterplot showing mean winning percentage (y-axis) vs. mean payroll (x-axis) for each of the five time periods. You could add a regression line (using, e.g., NumPy's [polyfit](https://docs.scipy.org/doc/numpy/reference/generated/numpy.polyfit.html)) in each scatter plot to ease interpretation.
 
@@ -119,7 +119,7 @@ for team `i` in year `j`.
 
 where <!--<em><span style="text-decoration: overline">payroll</span><sub>j</sub></em>--> <em>avg\_payroll<sub>j</sub></em> is the average payroll for year `j`, and <em>s<sub>j</sub></em> is the standard deviation of payroll for year `j`.
 
-#### Problem 6 (1 pt)
+#### Problem 6 (1.5 pt)
 
 Repeat the same plots as Problem 4, but use this new standardized payroll variable.
 
@@ -150,7 +150,7 @@ ${expected\_win\_pct_{ij} = 50+2.5×standardized\_payroll_{ij}}$
 
 Using this result, we can now create a single plot that makes it easier to compare teams efficiency. The idea is to create a new measurement unit for each team based on their winning percentage and their expected winning percentage that we can plot across time summarizing how efficient each team is in their spending.
 
-#### Problem 8 (2 pts)
+#### Problem 8 (1 pt)
 
 Create a new field to compute each team's spending effiency, given by
 
