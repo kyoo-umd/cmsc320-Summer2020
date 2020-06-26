@@ -65,7 +65,7 @@ We want to understand how efficient teams have been historically at spending mon
 
 The data you need to answer these questions is in the Salaries and Teams tables of the database.
 
-#### Problem 1
+#### Problem 1 (1 pt)
 
 Using SQL compute a relation containing the total payroll and winning percentage (number of wins / number of games * 100) for each team (that is, for each teamID and yearID combination). You should include other columns that will help when performing EDA later on (e.g., franchise ids, number of wins, number of games).
 
@@ -75,21 +75,21 @@ Include the SQL code you used to create this relation in your writeup. Describe 
 
 ### Payroll Distribution
 
-#### Problem 2
+#### Problem 2 (1 pt)
 
 Write code to produce plots that illustrate the distribution of payrolls across teams conditioned on time (from 1990-2014).
 
-#### Question 1
+#### Question 1 
 
 What statements can you make about the distribution of payrolls conditioned on time based on these plots? Remember you can make statements in terms of central tendency, spread, etc.
 
-#### Problem 3
+#### Problem 3 (1 pt)
 
 Write code to produce plots that specifically show at least one of the statements you made in Question 1. For example, if you make a statement that there is a trend for payrolls to decrease over time, make a plot of a statistic for central tendency (e.g., mean payroll) vs. time to show that specficially.
 
 ### Correlation between payroll and winning percentage
 
-#### Problem 4
+#### Problem 4 (1 pt)
 
 Write code to discretize year into five time periods (you can use [pandas.cut](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.cut.html) to accomplish this) and then make a scatterplot showing mean winning percentage (y-axis) vs. mean payroll (x-axis) for each of the five time periods. You could add a regression line (using, e.g., NumPy's [polyfit](https://docs.scipy.org/doc/numpy/reference/generated/numpy.polyfit.html)) in each scatter plot to ease interpretation.
 
@@ -103,7 +103,7 @@ What can you say about team payrolls across these periods? Are there any teams t
 
 It looks like comparing payrolls across years is problematic so let's do a transformation that will help with these comparisons.
 
-#### Problem 5
+#### Problem 5 (1 pt)
 
 Create a new variable in your dataset that standardizes payroll conditioned on year. So, this column for team `i` in year `j` should equal:
 
@@ -119,7 +119,7 @@ for team `i` in year `j`.
 
 where <!--<em><span style="text-decoration: overline">payroll</span><sub>j</sub></em>--> <em>avg\_payroll<sub>j</sub></em> is the average payroll for year `j`, and <em>s<sub>j</sub></em> is the standard deviation of payroll for year `j`.
 
-#### Problem 6
+#### Problem 6 (1 pt)
 
 Repeat the same plots as Problem 4, but use this new standardized payroll variable.
 
@@ -131,7 +131,7 @@ Discuss how the plots from Problem 4 and Problem 6 reflect the transformation yo
 
 It's hard to see global trends across time periods using these multiple plots, but now that we have standardized payrolls across time, we can look at a single plot showing correlation between winning percentage and payroll across time.
 
-#### Problem 7
+#### Problem 7 (1 pt)
 
 Make a single scatter plot of winning percentage (y-axis) vs. standardized payroll (x-axis). Add a regression line to highlight the relationship.
 
@@ -150,7 +150,7 @@ ${expected\_win\_pct_{ij} = 50+2.5×standardized\_payroll_{ij}}$
 
 Using this result, we can now create a single plot that makes it easier to compare teams efficiency. The idea is to create a new measurement unit for each team based on their winning percentage and their expected winning percentage that we can plot across time summarizing how efficient each team is in their spending.
 
-#### Problem 8
+#### Problem 8 (2 pts)
 
 Create a new field to compute each team's spending effiency, given by
 
@@ -169,7 +169,7 @@ Make a line plot with year on the x-axis and efficiency on the y-axis. A good se
 
 What can you learn from this plot compared to the set of plots you looked at in Question 2 and 3? How good was Oakland's efficiency during the Moneyball period?
 
-## Submission
+## Submission (1 pt)
 
 Prepare a Jupyter notebook that includes for each Problem: (a) code to carry out the step discussed, (b) output showing the result of your code, and (c) a short prose description of how your code works. Remember, the writeup you are preparing is intended to communicate your data analysis effectively. Thoughtlessly showing large amounts of output in your writeup defeats that purpose.
 
