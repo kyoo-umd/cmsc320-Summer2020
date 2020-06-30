@@ -116,7 +116,7 @@ p_i(\beta^k) = \frac{e^{f_i(\beta^k)}}{1+e^{f_i(\beta^k)}}
 
 <img src="figs/eq3.png" alt="Equation 3" width="350"/></p>
 
-<p><strong>Problem 2</strong> <strong>(This problem is +5 points of extra credit.)</strong> <em>Derive the above update equation</em>. Write the derivation in a markdown ipynb cell. </p>
+<p><strong>Problem 2</strong> <em>Derive the above update equation</em>. Write the derivation in a markdown ipynb cell. </p>
 
 <p><strong>Problem 3</strong> <em>Implement the gradient descent algorithm (either batch or stochastic versions) for multiple logistic regression.</em> I.e., modify your code in problem 1 for the logistic regression update equation.</p>
 <p>Make sure you include in your submission writeup, which version of the algorithm you are solving (stochastic or batch), and make sure to comment your code to help us understand your implementation.</p>
