@@ -1,8 +1,8 @@
 # Project 3
 
-Due: July 10, 2020
+Due: July 12, 2020
 
-## Part 1: Regression analysis of Gapminder data
+## Part 1: Regression analysis of Gapminder data (5 its)
 
 In this part of this project you will practice and experiment with linear regression using data from <a href="http://gapminder.org">gapminder.org</a>. We recommend spending a little time looking at material there, it is quite an informative site.
 
@@ -27,7 +27,7 @@ data.head()
 
 For this exercise you will explore how life expectancy has changed over 50 years across the world, and how economic measures like gross domestic product (GDP) are related to it.
 
-**Exercise 1**: *Make a scatter plot of life expectancy across time.*
+**Exercise 1**: (1 pt) *Make a scatter plot of life expectancy across time.*
 
 **Question 1**: *Is there a general trend (e.g., increasing or decreasing) for life expectancy across time? Is this trend linear? (answering this qualitatively from the plot, you will do a statistical analysis of this question shortly)*
 
@@ -55,42 +55,42 @@ Based on this plot, consider the following questions.
 
 **Question 5**: <em>According to the assumptions of the linear regression model, what <strong>should</strong> that violin plot look like?  That is, consider the assumptions the linear regression model you used assumes (e.g., about noise, about input distributions, etc); do you think everything is okay?</em>
 
-**Exercise 2**: <em>Fit a linear regression model using, e.g., the `LinearRegression` function from Scikit-Learn or the closed-form solution we derived in class, for life expectancy vs. year (as a continuous variable).  There is no need to plot anything here, but please print the fitted model out in a readable format.</em>
+**Exercise 2**: (1 pt) <em>Fit a linear regression model using, e.g., the `LinearRegression` function from Scikit-Learn or the closed-form solution we derived in class, for life expectancy vs. year (as a continuous variable).  There is no need to plot anything here, but please print the fitted model out in a readable format.</em>
 
 **Question 6**: <em>On average, by how much does life expectancy increase every year around the world?</em>
 
 **Question 7**: <em>Do you reject the null hypothesis of no relationship between year and life expectancy? Why?</em>
 
-**Exercise 3**: <em>Make a violin plot of residuals vs. year for the linear model from Exercise 2.</em>
+**Exercise 3**: (0.5 pt) <em>Make a violin plot of residuals vs. year for the linear model from Exercise 2.</em>
 
 **Question 8**: <em>Does the plot of Exercise 3 match your expectations (as you answered Question 4)?</em>
 
-**Exercise 4**: <em>Make a boxplot (or violin plot) of model residuals vs. continent.</em>
+**Exercise 4**: (0.5 pt) <em>Make a boxplot (or violin plot) of model residuals vs. continent.</em>
 
 **Question 9**: <em>Is there a dependence between model residual and continent? If so, what would that suggest when performing a regression analysis of life expectancy across time?</em>
 
-**Exercise 5**: <em>As in the Moneyball project, make a scatter plot of life expectancy vs. year, grouped by continent, and add a regression line.  The result here can be given as either one scatter plot per continent, each with its own regression line, or a single plot with each continent's points plotted in a different color, and one regression line per continent's points.  The former is probably easier to code up.</em>
+**Exercise 5**: (0.5 pt) <em>As in the Moneyball project, make a scatter plot of life expectancy vs. year, grouped by continent, and add a regression line.  The result here can be given as either one scatter plot per continent, each with its own regression line, or a single plot with each continent's points plotted in a different color, and one regression line per continent's points.  The former is probably easier to code up.</em>
 
 **Question 10**: <em>Based on this plot, should your regression model include an interaction term for continent <strong>and</strong> year? Why?</em>
 
-**Exercise 6**: <em>Fit a linear regression model for life expectancy including a term for an interaction between continent and year.  Print out the model in a readable format, e.g., print the coefficients of the model (no need to plot).  Hint: adding interaction terms is a form of feature engineering, like we discussed in class (think about, e.g., using (a subset of) polynomial features here).</em>
+**Exercise 6**: (0.5 pt) <em>Fit a linear regression model for life expectancy including a term for an interaction between continent and year.  Print out the model in a readable format, e.g., print the coefficients of the model (no need to plot).  Hint: adding interaction terms is a form of feature engineering, like we discussed in class (think about, e.g., using (a subset of) polynomial features here).</em>
 
 **Question 11**: <em>Are all parameters in the model significantly different from zero? If not, which are not significantly different from zero?</em>
 
 **Question 12**: <em>On average, by how much does life expectancy increase each year for each continent? (Provide code to answer this question by extracting relevant estimates from model fit)</em>
 
-**Exercise 7**: <em> Perform an F-test that compares how well two models fit your data: (a) the linear regression models from Exercise 2 (only including year as a covariate) and (b) Exercise 6 (including interaction between year and continent).  You may want to use the `scipy.stats.f_oneway` function for this.</em>  
+**Exercise 7**: (0.5 pt) <em> Perform an F-test that compares how well two models fit your data: (a) the linear regression models from Exercise 2 (only including year as a covariate) and (b) Exercise 6 (including interaction between year and continent).  You may want to use the `scipy.stats.f_oneway` function for this.</em>  
 
 **Question 13**: <em>Is the interaction model significantly better than the year-only model? Why?</em>
 
-**Exercise 8**: <em>Make a residuals vs. year violin plot for the interaction model. Comment on how well it matches assumptions of the linear regression model.</em>
+**Exercise 8**: (0.5 pt) <em>Make a residuals vs. year violin plot for the interaction model. Comment on how well it matches assumptions of the linear regression model.</em>
 
 
-## Part 2: Classification
+## Part 2: Classification (4 pts)
 
 ### Gradient Descent
 
-<p><strong>Problem 1</strong> <em>Implement the gradient descent algorithm (either batch or stochastic versions) for multiple linear regression. I.e., extend the version of the algorithm in the lecture notes to multiple parameters.</em></p>
+<p><strong>Problem 1</strong> (1 pt) <em>Implement the gradient descent algorithm (either batch or stochastic versions) for multiple linear regression. I.e., extend the version of the algorithm in the lecture notes to multiple parameters.</em></p>
 <p>The gradient descent update equation for logistic regression is given by:</p>
 
 <!--
@@ -116,11 +116,11 @@ p_i(\beta^k) = \frac{e^{f_i(\beta^k)}}{1+e^{f_i(\beta^k)}}
 
 <img src="figs/eq3.png" alt="Equation 3" width="350"/></p>
 
-<p><strong>Problem 2</strong> <em>Derive the above update equation</em>. Write the derivation in a markdown ipynb cell. </p>
+<p><strong>Problem 2</strong> (1 pt) <em>Derive the above update equation</em>. Write the derivation in a markdown ipynb cell. </p>
 
-<p><strong>Problem 3</strong> <em>Implement the gradient descent algorithm (either batch or stochastic versions) for multiple logistic regression.</em> I.e., modify your code in problem 1 for the logistic regression update equation.</p>
+<p><strong>Problem 3</strong> (1 pt) <em>Implement the gradient descent algorithm (either batch or stochastic versions) for multiple logistic regression.</em> I.e., modify your code in problem 1 for the logistic regression update equation.</p>
 <p>Make sure you include in your submission writeup, which version of the algorithm you are solving (stochastic or batch), and make sure to comment your code to help us understand your implementation.</p>
-<p><strong>Problem 4</strong> To test your programs, simulate data from the linear regression and logistic regression models and check that your implementations recover the simulation parameters properly.</p>
+<p><strong>Problem 4</strong> (1 pt) To test your programs, simulate data from the linear regression and logistic regression models and check that your implementations recover the simulation parameters properly.</p>
 
 <p>Use the following functions to simulate data for your testing:</p>
 
@@ -139,7 +139,7 @@ log_gen_data_y = [0 if i>0 else 1 for i in dump_y]}</code></pre>
 </div>
 <div id="try-it-out" class="section level2">
 
-<h3>Try it out!</h3>
+<h3>Try it out!</h3> (1 pt)
 
 <ol style="list-style-type: lower-alpha">
 <li><p>Find a dataset on which to try out different classification (or regression) algorithms. </p></li>
